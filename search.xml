@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>如何利用hexo与GitHub Pages创建自己的博客网站</title>
+    <url>/2019/05/29/How-to-build-hexo/</url>
+    <content><![CDATA[<h1 id="什么是hexo，GitHub-Pages又是什么？"><a href="#什么是hexo，GitHub-Pages又是什么？" class="headerlink" title="什么是hexo，GitHub Pages又是什么？"></a>什么是hexo，GitHub Pages又是什么？</h1><p><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a> 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<br><a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> 是GitHub为开发者提供的一种静态站点托管服务，旨在直接从GitHub存储库托管您的个人，组织或项目页面。<br>GitHub Pages可以与各种博客框架配合搭建个人博客网站，本文主要介绍hexo这种框架与GitHub Pages的配合使用。</p>
+<a id="more"></a>
+
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><ul>
+<li>安装Node.js</li>
+<li>安装Git</li>
+<li>GitHub账号</li>
+<li>可联网的环境</li>
+<li>可用域名(非必选)  </li>
+</ul>
+<h1 id="本地部署hexo"><a href="#本地部署hexo" class="headerlink" title="本地部署hexo"></a>本地部署hexo</h1><h2 id="安装Node-js与Git"><a href="#安装Node-js与Git" class="headerlink" title="安装Node.js与Git"></a>安装Node.js与Git</h2><p>我这里安装使用的是PPA源安装，若有需要也可以使用nvm等其他方式安装，网上教程很多，就不赘述了。</p>
+<pre><code>sudo apt-get update  
+sudo apt-get install npm  
+sudo apt-get install nodejs  
+sudo apt-get install git  </code></pre><h2 id="安装hexo与next主题"><a href="#安装hexo与next主题" class="headerlink" title="安装hexo与next主题"></a>安装hexo与next主题</h2><pre><code>$ npm install -g hexo-cli
+//创建文件夹
+$ mkdir [filename]
+//进入新建的hexo文件夹
+$ cd [filename]
+//初始化
+$ hexo init    
+//安装git部署插件
+$ npm install hexo-deployer-git --save
+//配置git身份信息
+$ git config --global user.name &quot;[yourname]&quot;
+$ git config --global user.email &quot;[youremail]&quot;
+$ git clone https://github.com/iissnan/hexo-theme-next.git themes/next</code></pre><p>安装好后打开hexo文件夹的_config.yml文件，找到theme:landscape，改为next，其他注释按需修改。<br>在本地查看部署效果：</p>
+<pre><code>$ hexo g
+$ hexo s</code></pre><p>访问<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p>
+<h1 id="关联GitHub-Pages"><a href="#关联GitHub-Pages" class="headerlink" title="关联GitHub Pages"></a>关联GitHub Pages</h1><h2 id="创建个人的GitHub-Pages"><a href="#创建个人的GitHub-Pages" class="headerlink" title="创建个人的GitHub Pages"></a>创建个人的GitHub Pages</h2><p>如果没有GitHub账号，点击<a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>使用邮箱注册，然后新建仓库，格式应该为username .github.io，username是你的GitHub用户名，这里的格式不能错。<a href="https://pages.github.com/" target="_blank" rel="noopener">详见</a></p>
+<h2 id="推送网站"><a href="#推送网站" class="headerlink" title="推送网站"></a>推送网站</h2><p>之前只是本地部署，接下来我们需要将本地项目推送到刚刚创建的GitHub仓库中。<br>首先编辑站点文件夹下的_config.yml文件，找到deploy这一项，修改为如下格式：</p>
+<pre><code>deploy:
+  type: git
+  repository: git@github.com:wsr3005/wsr3005.github.io.git
+  branch: master</code></pre><p>只需输入</p>
+<pre><code>hexo d</code></pre><p>即可完成推送，此时在地址栏输入***.github.io，发现博客上线。</p>
+<h2 id="绑定域名-可选"><a href="#绑定域名-可选" class="headerlink" title="绑定域名(可选)"></a>绑定域名(可选)</h2><ul>
+<li>本地hexo的source文件夹下创建CNAME，其中输入你的域名</li>
+<li>域名添加解析</li>
+<li>GitHub仓库设置中将Custom domain设置为你的域名</li>
+<li>本地推送修改到仓库  </li>
+</ul>
+<p>未完待续</p>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+</search>
