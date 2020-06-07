@@ -109,6 +109,8 @@ $ hexo s</code></pre><p>访问<a href="http://localhost:4000/" target="_blank" r
     <url>/2020/06/06/%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%8F%8D%E5%B0%84/</url>
     <content><![CDATA[<h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><h3 id="什么是注解"><a href="#什么是注解" class="headerlink" title="什么是注解"></a>什么是注解</h3><p>注解（Annotation）是Java5.0引入的技术。</p>
 <p><strong>简单的说，就是程序能读懂的注释。</strong></p>
+<a id="more"></a>
+
 <p>注解的用途：</p>
 <ul>
 <li>可用于向编译器提供某些指令。例如，@Override用于指示编译器这个被注解的方法是对该同名方法的重写。</li>
