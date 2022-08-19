@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 澳门首家线上赌场
-subtitle: 开业啦
+title: 在路上
+subtitle: 
 description:
 keywords:
 author: wsr
@@ -14,7 +14,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://wsr3005.github.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -83,3 +83,11 @@ deploy:
   type: git
   repository: git@github.com:wsr3005/wsr3005.github.io.git
   branch: master
+
+# sitemap for gitalk auto init
+sitemap:
+  path: sitemap.xml
+  template: ./sitemap_template.xml
+  rel: false
+  tag: true
+  category: false
