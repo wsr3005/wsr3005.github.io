@@ -24,11 +24,5 @@
     "moment": "^2.29.4",
     "request": "^2.88.2",
     "xml-parser": "^1.2.1"
-  },
-  "scripts": {
-    "start": "hexo clean && hexo g && hexo s",
-    "publish": "hexo g && hexo s",
-    "d": "npm run prod && hexo deploy && npm run talk",
-    "talk": "node talk-auto-init.js"
   }
 }
