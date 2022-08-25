@@ -9,28 +9,28 @@ tags:
 ## low 级别
 low级别意味着没有任何检查
 输入`<h1>This is a test</h1>`，可以看到可以被完整解析到页面上
-![图片](https://i.imgur.com/A9iGfgJ.png "<h1>This is a test</h1>")
+![](https://i.imgur.com/A9iGfgJ.png)
 
 输入`<meta http-equiv="refresh" content='0; url=https://xxx:xxx/portal.php`
-![图片](https://i.imgur.com/Ao8E5ic.png "meta标签注入")
+![](https://i.imgur.com/Ao8E5ic.png )
 
 ## medium 级别
 进行和low级别相同操作
-![图片](https://i.imgur.com/VbjtMEA.png)
+![](https://i.imgur.com/VbjtMEA.png)
 
 发现无法注入成功
 抓包可见cookie值有变化
 
-![图片](https://i.imgur.com/quGGiYz.png)
+![](https://i.imgur.com/quGGiYz.png)
 
-![图片](https://i.imgur.com/FRKq9XX.png)
+![](https://i.imgur.com/FRKq9XX.png)
 
 查看源码app/htmli_get.php
 
-![图片](https://i.imgur.com/E4MkkpO.png)
+![](https://i.imgur.com/E4MkkpO.png)
 
 进一步找到xss_check_1,在app/functions_external.php中
-![图片](https://i.imgur.com/vtSeVJo.png)
+![](https://i.imgur.com/vtSeVJo.png)
 
 可以看出medium级别的检查是先将输入的<>转为html字符实体&lt和&gt
 然后对输入解码
@@ -47,7 +47,7 @@ low级别意味着没有任何检查
 运行和medium相同操作,也是无法注入成功,查看代码
 发现是带有ENT_QUOTES参数的htmlspecialchars()函数,
 暂时没想到办法
-![图片](https://i.imgur.com/9QZnrY9.png)
+![](https://i.imgur.com/9QZnrY9.png)
 
 # HTML Injection - Reflected(POST)
 同GET方式
@@ -55,14 +55,14 @@ low级别意味着没有任何检查
 # HTML Injection - Reflected (URL)
 ## low 级别
 抓包如图示,将编码部分更改即可
-![图片](https://i.imgur.com/cxNSH0x.png)
-![图片](https://i.imgur.com/v8SJIPz.png)
+![](https://i.imgur.com/cxNSH0x.png)
+![](https://i.imgur.com/v8SJIPz.png)
 
 根据源码
-![图片](https://i.imgur.com/fPFU8hI.png)
+![](https://i.imgur.com/fPFU8hI.png)
 
 也可以更改host
-![图片](https://i.imgur.com/QysdV76.png)
+![](https://i.imgur.com/QysdV76.png)
 
 ## medium 级别
 该问题似乎是在 Javascript 中运行的 DOM XSS 中的一个漏洞.
@@ -75,7 +75,7 @@ low级别意味着没有任何检查
 # HTML Injection - Stored (Blog)
 ## low 级别
 直接尝试注入，可行
-![图片](https://i.imgur.com/RBcI4bt.png)
+![](https://i.imgur.com/RBcI4bt.png)
 
 ## medium&high 级别
 尝试注入,发现没有被解析
