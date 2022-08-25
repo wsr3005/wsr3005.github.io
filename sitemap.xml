@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://wsr3005.github.com/about/index.html</loc>
+    <loc>http://wsr3005.github.com/2022/08/25/Linux%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98%E5%BD%95/</loc>
     
-    <lastmod>2022-08-22T09:07:31.118Z</lastmod>
+    <lastmod>2022-08-25T08:28:55.293Z</lastmod>
     
-    <date>1557413093000</date>
-    <title>about | 在路上</title>
+    <date>1661416063000</date>
+    <title>Linux命令备忘录 | 在路上</title>
     
     <desc></desc>
   </url>
@@ -15,10 +15,21 @@
   <url>
     <loc>http://wsr3005.github.com/2022/08/01/bwapp%E9%80%9A%E5%85%B3%E4%B9%8BA1-Injection/</loc>
     
-    <lastmod>2022-08-22T08:30:05.478Z</lastmod>
+    <lastmod>2022-08-22T14:05:09.338Z</lastmod>
     
     <date>1659351932000</date>
     <title>bwapp通关之A1-Injection | 在路上</title>
+    
+    <desc></desc>
+  </url>
+  
+  <url>
+    <loc>http://wsr3005.github.com/about/index.html</loc>
+    
+    <lastmod>2022-08-22T09:07:31.118Z</lastmod>
+    
+    <date>1557413093000</date>
+    <title>about | 在路上</title>
     
     <desc></desc>
   </url>
